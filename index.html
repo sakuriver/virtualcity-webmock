@@ -9,19 +9,29 @@
         const language = document.form1.player_language;
         var titles = ["仮想都市", "VirtualCity", "虚拟城市"];
         var languageTitles = ["日本語", "English", "中国人"];
+        var vrfirsts = ["VR施設1", "vr facility first", "VR设施1"];
+        var vrseconds = ["VR施設2", "vr facility second", "VR设施2"];
+        var vrthirds = ["VR施設3", "vr facility third", "VR设施3"];
+        var stamps = ["スタンプラリー", "Stamp Rally", "邮票集会"];
+
+        var changes = ["言語切替", "Language switching", "语言切换"];
+
         console.log(language);
+
         var lang = language.selectedIndex;
         console.log(language.options);
         console.log(lang);
         console.log(titles);
         document.getElementById("title").innerHTML = titles[lang];
         document.getElementById("playerLanguageButton").innerHTML =
-          titles[lang];
+          languageTitles[lang];
+        document.getElementById("playerLanguageTitle").innerHTML =
+          languageTitles[lang];
 
-        //document.getElementById("vrfirst").innerHTML= ;
-        //document.getElementById("vrsecond").innerHTML=;
-        //document.getElementById("vrthird").innerHTML=;
-        //document.getElementById("stamp").innerHTML=;
+        document.getElementById("vrfirst").innerHTML = vrfirsts[lang];
+        document.getElementById("vrsecond").innerHTML = vrseconds[lang];
+        document.getElementById("vrthird").innerHTML = vrthirds[lang];
+        document.getElementById("stamp").innerHTML = changes[lang];
       }
     </script>
   </head>
@@ -30,11 +40,11 @@
     <div id="app">
       <h1 id="title">Virtual City</h1>
       <form name="form1">
-        言語
+        <div id="playerLanguageTitle"></div>
         <select id="playerLanguage" name="player_language">
-          <option name="ja_lang"></option>
-          <option name="en_lang"></option>
-          <option name="ch_lang"></option>
+          <option name="ja_lang">日本語</option>
+          <option name="en_lang">English</option>
+          <option name="ch_lang">中国語</option>
         </select>
       </form>
       <input
@@ -47,8 +57,10 @@
         <a id="vrfirst" href="vr1.html">VR1施設</a><br />
         <a id="vrsecond" href="vr2.html">VR2施設</a><br />
         <a id="vrthird" href="vr3.html">VF3施設</a><br />
-        <a id="stamp" href="stamp.html">スタンプラリー情報</a>
+        <a id="stamp" href="stamp.html">スタンプラリー情報</a><br />
         <!-- スタンプラリー用のQRコード組み込み-->
+        <a id="macpro_buy" href="macpro_buy.html">MacPro購入</a>
+        <a id="hololens2_buy" href="hololens2_buy.html">Hololens2購入</a>
       </div>
     </div>
   </body>
